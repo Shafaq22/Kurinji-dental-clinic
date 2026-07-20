@@ -1,0 +1,1483 @@
+/* ==========================================================================
+   DESIGN SYSTEM & VARIABLES
+   ========================================================================== */
+:root {
+    /* Premium Clinical Light Blue Theme */
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: rgba(37, 99, 235, 0.08);
+    --secondary: #06b6d4;
+    --accent: #f59e0b;
+    
+    /* Clean light slate background and navy text variables */
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-nav: rgba(255, 255, 255, 0.85);
+    --border-nav: rgba(226, 232, 240, 0.8);
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --text-light: #94a3b8;
+    --border: #e2e8f0;
+    
+    /* Clean, soft shadow effects */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(37, 99, 235, 0.06), 0 4px 6px -2px rgba(37, 99, 235, 0.03);
+    
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   RESET & GLOBAL STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+header, section, div, p, h1, h2, h3, h4, span, a, button, .doctor-card, .treatment-card, .quick-contact-box, .hours-card-wrapper {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-family: var(--font-heading);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35), inset 0 2px 0 rgba(255, 255, 255, 0.25), inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.5), inset 0 2px 0 rgba(255, 255, 255, 0.3), inset 0 -3px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1.5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35), inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary:active {
+    transform: translateY(-1px);
+}
+
+.btn-lg {
+    padding: 16px 36px;
+    font-size: 17px;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+.navbar-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--bg-nav);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-nav);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(20, 184, 166, 0.3);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.clinic-name {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.clinic-sub {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text-muted);
+    position: relative;
+    padding: 6px 0;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.nav-btn {
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(15, 118, 110, 0.25);
+}
+
+.nav-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(15, 118, 110, 0.35);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   SECTION COMMON HEADER
+   ========================================================================== */
+section {
+    padding: 100px 0;
+}
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background-color: rgba(20, 184, 166, 0.1);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-size: 38px;
+    color: var(--text-main);
+    margin-bottom: 16px;
+}
+
+.section-divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    padding: 160px 0 100px 0;
+    background: linear-gradient(180deg, rgba(20, 184, 166, 0.05) 0%, rgba(248, 250, 252, 1) 100%);
+    overflow: hidden;
+}
+
+.video-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px 0;
+    background: #090d16;
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(9, 13, 22, 0.75) 0%, rgba(9, 13, 22, 0.6) 50%, rgba(9, 13, 22, 0.8) 100%);
+    z-index: 2;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.video-hero .hero-container {
+    grid-template-columns: 1fr;
+    z-index: 3;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.hero-content .badge i {
+    color: var(--accent);
+}
+
+.hero-content h1 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: var(--text-main);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 17px;
+    color: var(--text-muted);
+    margin-bottom: 36px;
+    max-width: 560px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    border-top: 1px solid var(--border);
+    padding-top: 32px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.star-icon {
+    font-size: 18px;
+    color: var(--accent);
+}
+
+.stat-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Video Hero Overlay Overrides */
+.video-hero h1 {
+    color: #ffffff;
+}
+
+.video-hero .hero-content p {
+    color: #cbd5e1;
+}
+
+.video-hero .badge {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    backdrop-filter: blur(4px);
+}
+
+.video-hero .stat-number {
+    color: #ffffff;
+}
+
+.video-hero .stat-label {
+    color: #94a3b8;
+}
+
+.video-hero .hero-stats {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary-white {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-secondary-white:hover {
+    background-color: #ffffff;
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.hero-visual {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: visible;
+}
+
+.hero-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.floating-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: var(--shadow-md);
+    z-index: 3;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-card i {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(20, 184, 166, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.floating-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.floating-card p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.experience-card {
+    top: 30px;
+    left: -30px;
+}
+
+.open-card {
+    bottom: 30px;
+    right: -20px;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ==========================================================================
+   2. DOCTOR INTRODUCTION
+   ========================================================================== */
+.doctor-section {
+    background-color: var(--bg-card);
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+}
+
+.doctor-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.doctor-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(37, 99, 235, 0.45);
+}
+
+.doctor-card-header {
+    padding: 40px 32px 0 32px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.doctor-icon-badge {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 8px 20px rgba(20, 184, 166, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+}
+
+.doctor-card:hover .doctor-icon-badge {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 24px rgba(20, 184, 166, 0.4);
+}
+
+.doctor-info {
+    padding: 32px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-info h3 {
+    font-size: 24px;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.doctor-title {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.doctor-bio {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.doctor-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+}
+
+.doctor-meta span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.doctor-meta i {
+    color: var(--secondary);
+}
+
+/* ==========================================================================
+   3. TREATMENTS SECTION (CARDS)
+   ========================================================================== */
+.treatments-section {
+    background-color: var(--bg-main);
+}
+
+.treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.treatment-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 0;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.treatment-image-wrapper {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+}
+
+.treatment-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.treatment-card:hover .treatment-img {
+    transform: scale(1.08);
+}
+
+.treatment-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.treatment-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(37, 99, 235, 0.45);
+}
+
+.treatment-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(20, 184, 166, 0.1);
+    color: var(--primary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 24px;
+    transition: var(--transition);
+}
+
+.treatment-card:hover .treatment-icon {
+    background-color: var(--primary);
+    color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.treatment-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.treatment-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.card-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-link i {
+    transition: var(--transition);
+}
+
+.treatment-card:hover .card-link i {
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   4. CLINIC GALLERY SECTION (IMAGE SLIDER)
+   ========================================================================== */
+.gallery-section {
+    background-color: var(--bg-card);
+}
+
+.gallery-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+    .gallery-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+.gallery-info {
+    text-align: left;
+}
+
+.gallery-info h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    color: var(--text-main);
+}
+
+.gallery-info p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.section-divider-left {
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    margin-bottom: 24px;
+}
+
+.gallery-video-wrapper {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+    background-color: #000000;
+    line-height: 0;
+}
+
+.gallery-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   5. CLINIC HOURS SECTION
+   ========================================================================== */
+.hours-section {
+    background-color: var(--bg-main);
+}
+
+.hours-card-wrapper {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    overflow: hidden;
+}
+
+.hours-info {
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.05), rgba(15, 118, 110, 0.08));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hours-info h2 {
+    font-size: 34px;
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
+
+.hours-info p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.quick-contact-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--bg-card);
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.quick-contact-box .q-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(20, 184, 166, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.quick-contact-box span {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.quick-contact-box a {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.hours-table-container {
+    padding: 60px;
+}
+
+.table-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.table-title i {
+    color: var(--primary);
+}
+
+.hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--border);
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.hours-row .day {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.hours-row .time {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.hours-row .divider {
+    color: var(--border);
+    margin: 0 4px;
+}
+
+.hours-row.closed .day {
+    color: var(--text-light);
+}
+
+.hours-row.closed .time {
+    color: #ef4444;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ==========================================================================
+   6. PATIENT REVIEWS (CAROUSEL)
+   ========================================================================== */
+.reviews-section {
+    background-color: var(--bg-card);
+}
+
+.reviews-carousel-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.reviews-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-slide {
+    flex: 0 0 100%;
+    padding: 10px;
+}
+
+.review-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+}
+
+.quote-icon {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    color: rgba(20, 184, 166, 0.15);
+}
+
+.rating-stars {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.review-text {
+    font-size: 17px;
+    color: var(--text-muted);
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.reviewer-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.reviewer-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.review-date {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.carousel-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background-color: var(--bg-card);
+    color: var(--primary);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.c-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--border);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.c-dot.active {
+    background-color: var(--primary);
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   7. LOCATION + GOOGLE MAP
+   ========================================================================== */
+.location-section {
+    position: relative;
+    background-image: linear-gradient(to right, rgba(248, 250, 252, 0.96) 35%, rgba(248, 250, 252, 0.8) 70%, rgba(248, 250, 252, 0.4) 100%), url('assets/visit-clinic-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.location-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.location-details h2 {
+    font-size: 34px;
+    margin-bottom: 16px;
+}
+
+.location-details p {
+    color: var(--text-muted);
+    margin-bottom: 36px;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-item .c-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+}
+
+.contact-item h4 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.contact-item p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.contact-item a:hover {
+    color: var(--primary);
+}
+
+.map-container {
+    height: 420px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 6px solid var(--bg-card);
+}
+
+/* ==========================================================================
+   8. CALL TO ACTION (CTA)
+   ========================================================================== */
+.cta-section {
+    background: #e0eafd;
+    color: var(--text-main);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.cta-bg-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.08) 0%, transparent 40%),
+                      radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 40px;
+    margin-bottom: 16px;
+    color: var(--primary-dark);
+}
+
+.cta-content p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 36px;
+}
+
+.cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.cta-section .btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+.cta-section .btn-primary:hover {
+    background-color: var(--primary-dark);
+    color: #ffffff;
+}
+
+.cta-section .btn-secondary {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.cta-section .btn-secondary:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.emergency-note {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+.footer-section {
+    background-color: #0b0f19;
+    color: #94a3b8;
+    padding: 80px 0 30px 0;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-brand .logo {
+    margin-bottom: 24px;
+}
+
+.footer-brand .clinic-name {
+    color: #ffffff;
+}
+
+.footer-brand .clinic-sub {
+    color: #64748b;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background-color: #1e293b;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links ul, .footer-services ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a, .footer-services a {
+    font-size: 14px;
+}
+
+.footer-links a:hover, .footer-services a:hover {
+    color: var(--secondary);
+    padding-left: 4px;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 12px;
+    line-height: 1.5;
+}
+
+.footer-contact i {
+    color: var(--secondary);
+    margin-top: 4px;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    border-top: 1px solid #1e293b;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .hero-content {
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 46px;
+    }
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+    .hero-stats {
+        justify-content: center;
+    }
+    .hero-image-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .hero-image {
+        height: 380px;
+    }
+    .hours-card-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .location-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    .section-header h2 {
+        font-size: 30px;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--bg-card);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 60px;
+        gap: 36px;
+        transition: var(--transition);
+        box-shadow: var(--shadow-md);
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .doctor-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-slider {
+        height: 350px;
+    }
+    .hours-info, .hours-table-container {
+        padding: 30px;
+    }
+    .review-card {
+        padding: 30px 20px;
+    }
+    .quote-icon {
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+    }
+    .cta-content h2 {
+        font-size: 30px;
+    }
+    .cta-btns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

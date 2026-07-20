@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurinji Dental Centre | Professional Dental Clinic in Tirupur</title>
+    <meta name="description" content="Kurinji Dental Centre in Anuppapalayam, Tirupur offers advanced dental care including Root Canal Treatment (RCT), cosmetic fillings, implants, and orthodontics. Book your visit today.">
+    <script>
+        localStorage.removeItem('theme');
+        document.documentElement.removeAttribute('data-theme');
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=10">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar-header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+                <div class="logo-text">
+                    <span class="clinic-name">Kurinji</span>
+                    <span class="clinic-sub">Dental Centre</span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#doctor" class="nav-link">Doctors</a>
+                <a href="#treatments" class="nav-link">Treatments</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#hours" class="nav-link">Hours</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#location" class="nav-link">Location</a>
+                <a href="tel:9965573907" class="nav-btn"><i class="fa-solid fa-phone"></i> Call Now</a>
+            </nav>
+            <div class="nav-right">
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section video-hero">
+        <video autoplay loop muted playsinline class="hero-video-bg">
+            <source src="assets/kurinji1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-video-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge"><i class="fa-solid fa-tooth"></i> Welcome to Kurinji Dental Centre</div>
+                <h1>Your Smile Is Our <br><span class="gradient-text">Top Priority</span></h1>
+                <p>Kurinji Dental Centre has been delivering exceptional dental care in Tirupur. Specializing in advanced pain-free Root Canal Treatments, cosmetic filling, implants, and comprehensive oral healthcare.</p>
+                <div class="hero-actions">
+                    <a href="tel:9965573907" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now: 9965573907</a>
+                    <a href="#treatments" class="btn btn-secondary-white">Explore Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">Pain-Free</span>
+                        <span class="stat-label">Root Canal Care</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Advanced</span>
+                        <span class="stat-label">Clinic Equipment</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Certified</span>
+                        <span class="stat-label">Dental Care</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Doctor Introduction Section -->
+    <section id="doctor" class="doctor-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Meet Our Specialists</span>
+                <h2>Dedicated to Your Dental Wellness</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="doctor-grid">
+                <div class="doctor-card premium-badge-card">
+                    <div class="doctor-card-header">
+                        <div class="doctor-icon-badge"><i class="fa-solid fa-user-doctor"></i></div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Uma Maheswari</h3>
+                        <p class="doctor-title">Proprietor & Chief Dental Surgeon</p>
+                        <p class="doctor-bio">Dr. Uma Maheswari leads Kurinji Dental Centre with a vision of gentle, patient-centric dental care. With years of experience, she specializes in advanced diagnostics, Root Canal Treatments, and conservative dental therapies.</p>
+                        <div class="doctor-meta">
+                            <span><i class="fa-solid fa-certificate"></i> Specialized in RCT</span>
+                            <span><i class="fa-solid fa-user-doctor"></i> Lead Surgeon</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doctor-card premium-badge-card">
+                    <div class="doctor-card-header">
+                        <div class="doctor-icon-badge"><i class="fa-solid fa-user-gear"></i></div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Mr. Saravanan</h3>
+                        <p class="doctor-title">Clinic Administrator & Dental Coordinator</p>
+                        <p class="doctor-bio">Mr. Saravanan oversees clinic operations, ensuring patient comfort, sanitization standards, and scheduling coordination. He facilitates seamless consultations and ensures a welcoming environment for all patients.</p>
+                        <div class="doctor-meta">
+                            <span><i class="fa-solid fa-handshake"></i> Patient Care Coordinator</span>
+                            <span><i class="fa-solid fa-shield-halved"></i> Safety & Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Treatments Section (Cards) -->
+    <section id="treatments" class="treatments-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Our Expertise</span>
+                <h2>Comprehensive Dental Care</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="treatments-grid">
+                <!-- Card 1 -->
+                <div class="treatment-card">
+                    <div class="treatment-image-wrapper">
+                        <img src="assets/treatment-rct.jpg" alt="RCT (Root Canal)" class="treatment-img">
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-icon"><i class="fa-solid fa-tooth"></i></div>
+                        <h3>RCT (Root Canal)</h3>
+                        <p>Save your natural teeth. Our advanced root canal procedures are virtually painless, relieving infection and restoring function efficiently.</p>
+                        <a href="tel:9965573907" class="card-link">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="treatment-card">
+                    <div class="treatment-image-wrapper">
+                        <img src="assets/treatment-gums.png" alt="Bleeding Gums Treatment" class="treatment-img">
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-icon"><i class="fa-solid fa-droplet-slash"></i></div>
+                        <h3>Bleeding Gums Treatment</h3>
+                        <p>Comprehensive gum therapies to treat periodontitis and gingivitis, preventing tooth loss and improving systemic health.</p>
+                        <a href="tel:9965573907" class="card-link">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="treatment-card">
+                    <div class="treatment-image-wrapper">
+                        <img src="assets/treatment-filling.png" alt="Tooth Coloured Filling" class="treatment-img">
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3>Tooth Coloured Filling</h3>
+                        <p>Modern composite fillings matched perfectly to your natural enamel tone, restoring strength and appearance invisibly.</p>
+                        <a href="tel:9965573907" class="card-link">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="treatment-card">
+                    <div class="treatment-image-wrapper">
+                        <img src="assets/treatment-implant.png" alt="Dental Implantation" class="treatment-img">
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+                        <h3>Dental Implantation</h3>
+                        <p>Permanent, rock-solid replacements for missing teeth using medical-grade titanium implants that look and feel completely natural.</p>
+                        <a href="tel:9965573907" class="card-link">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="treatment-card">
+                    <div class="treatment-image-wrapper">
+                        <img src="assets/treatment-kids.png" alt="Paedodontics (Kids Care)" class="treatment-img">
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-icon"><i class="fa-solid fa-child"></i></div>
+                        <h3>Paedodontics (Kids Care)</h3>
+                        <p>Specialized, gentle dental care designed to keep children's developing teeth healthy in a friendly and stress-free environment.</p>
+                        <a href="tel:9965573907" class="card-link">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="treatment-card">
+                    <div class="treatment-image-wrapper">
+                        <img src="assets/treatment-braces.png" alt="Orthodontics (Braces)" class="treatment-img">
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-icon"><i class="fa-solid fa-grip-lines-vertical"></i></div>
+                        <h3>Orthodontics (Braces)</h3>
+                        <p>Correct crowding, gaps, and misaligned bites with our modern metal, ceramic, or invisible aligner solutions.</p>
+                        <a href="tel:9965573907" class="card-link">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Clinic Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="gallery-layout">
+                <div class="gallery-info">
+                    <span class="section-tag">Visual Tour</span>
+                    <h2>A Glimpse into Premium Care</h2>
+                    <div class="section-divider-left"></div>
+                    <p>Experience our state-of-the-art dental facility in Tirupur. We maintain the highest standards of clinical hygiene, advanced pain-free equipment, and a welcoming environment designed for patient comfort.</p>
+                    <p>Our clinic is fully equipped with modern sterilization autoclaves, comfortable dental chairs, and digital diagnostic units to deliver exceptional dental care for families and kids.</p>
+                </div>
+                <div class="gallery-video-wrapper">
+                    <video autoplay loop muted playsinline class="gallery-video">
+                        <source src="assets/kurinji1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Clinic Hours Section -->
+    <section id="hours" class="hours-section">
+        <div class="container">
+            <div class="hours-card-wrapper">
+                <div class="hours-info">
+                    <span class="section-tag">Timing Details</span>
+                    <h2>Plan Your Visit</h2>
+                    <p>We offer flexible morning and evening consultation slots to fit your busy schedule. Book an appointment in advance to avoid waiting.</p>
+                    <div class="quick-contact-box">
+                        <div class="q-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div>
+                            <span>For Bookings & Queries</span>
+                            <a href="tel:9965573907">9965573907</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hours-table-container">
+                    <h3 class="table-title"><i class="fa-regular fa-calendar-check"></i> Weekly Business Hours</h3>
+                    <div class="hours-list">
+                        <div class="hours-row">
+                            <span class="day">Monday</span>
+                            <span class="time">9:30 AM - 2:00 PM <span class="divider">|</span> 7:00 PM - 9:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Tuesday</span>
+                            <span class="time">9:30 AM - 2:00 PM <span class="divider">|</span> 7:00 PM - 9:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Wednesday</span>
+                            <span class="time">9:30 AM - 2:00 PM <span class="divider">|</span> 7:00 PM - 9:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Thursday</span>
+                            <span class="time">9:30 AM - 2:00 PM <span class="divider">|</span> 7:00 PM - 9:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Friday</span>
+                            <span class="time">9:30 AM - 2:00 PM <span class="divider">|</span> 7:00 PM - 9:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="day">Saturday</span>
+                            <span class="time">9:30 AM - 2:00 PM <span class="divider">|</span> 7:00 PM - 9:00 PM</span>
+                        </div>
+                        <div class="hours-row closed">
+                            <span class="day">Sunday</span>
+                            <span class="time"><i class="fa-solid fa-circle-xmark"></i> Closed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Patient Reviews Section (Carousel) -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our Patients Say</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="reviews-carousel-wrapper">
+                <div class="reviews-track" id="reviewsTrack">
+                    <!-- Review 1 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="review-text">"Outstanding service! Dr. Uma Maheswari is very professional and patient. The root canal treatment was completely painless, and they took great care to explain the procedure beforehand."</p>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">K</div>
+                                <div>
+                                    <h4 class="reviewer-name">Kiruba</h4>
+                                    <span class="review-date">February 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="review-text">"Excellent place for family dental care. Clean premises, friendly reception, and great treatment options. Very pleased with my dental filling treatment here."</p>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">B</div>
+                                <div>
+                                    <h4 class="reviewer-name">Babu</h4>
+                                    <span class="review-date">September 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="review-text">"I visited Kurinji Dental Centre for gum bleeding issue. The treatment was highly effective and they gave me solid tips for daily oral hygiene. Very friendly doctors!"</p>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">A</div>
+                                <div>
+                                    <h4 class="reviewer-name">Anandhi</h4>
+                                    <span class="review-date">November 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 4 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="review-text">"Highly recommended dentist in Anuppapalayam. Extremely hygienic setup and affordable treatments. Dr. Uma does an amazing job with kids' dental issues too."</p>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">M</div>
+                                <div>
+                                    <h4 class="reviewer-name">Mohmad Raj Gaffoor</h4>
+                                    <span class="review-date">August 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev-btn-c" id="prevReview" aria-label="Previous review"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="carousel-btn next-btn-c" id="nextReview" aria-label="Next review"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="carousel-dots" id="carouselDots">
+                    <!-- Dots generated dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Location + Google Map Section -->
+    <section id="location" class="location-section">
+        <div class="container">
+            <div class="location-layout">
+                <div class="location-details">
+                    <span class="section-tag">Find Us</span>
+                    <h2>Visit Our Clinic</h2>
+                    <p>Conveniently located in Anuppapalayam, Tirupur, opposite Kovai Departmental Store. Our clinic offers ample parking and is easily accessible by public transport.</p>
+                    
+                    <div class="contact-info-list">
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="c-text">
+                                <h4>Clinic Address</h4>
+                                <p>No 26 E1 Vijay Complex, Anuppapalayam, Near Opposite Kovai Departmental Store, Tirupur, Tamil Nadu 641652</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="c-text">
+                                <h4>Phone Number</h4>
+                                <p><a href="tel:9965573907">9965573907</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <div class="c-text">
+                                <h4>Landmark</h4>
+                                <p>Opposite Kovai Departmental Store</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <!-- Embedded Interactive Map using coordinates: Lat 11.141822222222, Lng 77.31845 -->
+                    <iframe 
+                        src="https://maps.google.com/maps?q=11.141822,77.31845&hl=en&z=16&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Kurinji Dental Centre Location Map">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Call to Action (Call Now) Section -->
+    <section class="cta-section">
+        <div class="cta-bg-shapes"></div>
+        <div class="container text-center">
+            <div class="cta-content">
+                <h2>Ready to Smile Confidently Again?</h2>
+                <p>Call us today to schedule your consultation and get expert dental treatments in Tirupur.</p>
+                <div class="cta-btns">
+                    <a href="tel:9965573907" class="btn btn-primary btn-lg"><i class="fa-solid fa-phone"></i> Call Now: 9965573907</a>
+                    <a href="#hours" class="btn btn-secondary btn-lg">Check Availability</a>
+                </div>
+                <div class="emergency-note">
+                    <p><i class="fa-solid fa-circle-info"></i> For dental emergencies, please call us directly for priority slot booking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+                        <div class="logo-text">
+                            <span class="clinic-name">Kurinji</span>
+                            <span class="clinic-sub">Dental Centre</span>
+                        </div>
+                    </a>
+                    <p>Established in 2010. Providing premium quality dental care, state-of-the-art procedures, and healthy smiles to Tirupur.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#doctor">Our Doctors</a></li>
+                        <li><a href="#treatments">Treatments</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#hours">Working Hours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Treatments</h3>
+                    <ul>
+                        <li><a href="#treatments">Root Canal Therapy (RCT)</a></li>
+                        <li><a href="#treatments">Bleeding Gums Care</a></li>
+                        <li><a href="#treatments">Tooth Coloured Fillings</a></li>
+                        <li><a href="#treatments">Dental Implantation</a></li>
+                        <li><a href="#treatments">Pediatric Dentistry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Get In Touch</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> No 26 E1 Vijay Complex, Anuppapalayam, Near Opposite Kovai Departmental Store, Tirupur, 641652</p>
+                    <p><i class="fa-solid fa-phone"></i> Phone: 9965573907</p>
+                    <p><i class="fa-solid fa-clock"></i> Mon - Sat: 9:30 AM - 9:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Kurinji Dental Centre. All Rights Reserved. Designed for Premium Patient Care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js?v=3"></script>
+</body>
+</html>
