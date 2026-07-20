@@ -586,8 +586,15 @@ section {
 
 .doctor-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
     gap: 36px;
+}
+
+.doctor-grid .doctor-card {
+    max-width: 520px;
+    width: 100%;
 }
 
 .doctor-card {
